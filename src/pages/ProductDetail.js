@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import useQuery from '../hooks/useQuery'
 import { useParams } from 'react-router-dom'
 import ProductInfo from '../components/ProductInfo'
@@ -6,7 +6,7 @@ import ProductInfo from '../components/ProductInfo'
 const ProductDetail = () => {
   const {id} = useParams()
 
-  const {data: product ,loading,error} = useQuery(`http://localhost:3000/products/?_id=${id}`)
+  const {data: product } = useQuery(`https://my-json-server.typicode.com/jimin2n7/dbshop/products/?_id=${id}`)
   
   return (
     <div>

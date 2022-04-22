@@ -17,7 +17,7 @@ const Home = () => {
     return {page: Number(page), sort: sort}
   },[search])
 
-  const {data, loading, error} = useQuery(`https://my-json-server.typicode.com/jimin2n7/dbshop/products?_limit=${limit}&_page=${page}&_sort=${sort}`)
+  const {data} = useQuery(`https://my-json-server.typicode.com/jimin2n7/dbshop/products?_limit=${limit}&_page=${page}&_sort=${sort}`)
 
   useEffect(()=>{
     if(data){
